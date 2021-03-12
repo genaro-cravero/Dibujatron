@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujatron</title>
+</head>
+<body>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.52.0/dist/phaser.js"></script>
+    <script type="text/javascript" src="./Scene1.js"></script>
+
+
+    
+    <script type="text/javascript" src="./game.js"></script>
+
+<!-- Inputs -->
+    <script type="text/javascript">
+	var NPlayers = prompt("Número de Jugadores:");
+    NPlayers = parseInt(NPlayers, 10);
+
+    while(NPlayers > 16 || NPlayers < 3 || Number.isNaN(NPlayers) == true){
+        NPlayers = prompt("Número de Jugadores: (Entre 3 y 16)");
+        NPlayers = parseInt(NPlayers, 10);
+    };
+    var Player = [];
+    var Person = [];
+    for (let index = 0; index < NPlayers; index++) {
+        const element = NPlayers[index];
+        Player[index] = prompt("Nombre del jugador "+ (index+1) + ":");
+        Person[index] = true;
+        while(Player[index] == "" || Player[index] == null){
+            Player[index] = prompt("Reingrese nombre del jugador "+ (index+1) + ":")
+            
+        };
+    }
+    
+	</script>
+    
+</body>
+</html>
